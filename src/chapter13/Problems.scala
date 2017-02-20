@@ -37,6 +37,15 @@ object Problems extends App {
 
   println(func(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)).mkString(","))
 
+   //4 implementation 2, it is done using collect function, because collect accepts partial function and map is also a Partial 
+   //Function, need to dig it more. 
+  def usingCollect(string: Array[String], inputMap: Map[String, Int]): Array[Int] = {
+    string collect inputMap
+  }
+
+  println(usingCollect(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)).mkString(","))
+
+  
   //5
   def mkString2(seq: Seq[Any], separator: String) = {
     seq.reduceLeft(_ + separator + _)
