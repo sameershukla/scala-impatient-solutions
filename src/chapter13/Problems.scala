@@ -62,7 +62,12 @@ object Problems extends App {
   val prices = List(5.0, 20.0, 9.95)
   val quantities = List(10, 2, 1)
 
+  //Tupled changes a function with 2 arguments to one that takes up a tuple.
+  //val tupledBook:((String,Int)) => Book = Book.tupled
   println((prices zip quantities).map { Function.tupled(_ * _) })
+  
+  //approach 2, Function.tupled way is much cleaner.
+  println((prices zip quantities).map { x => x._1 * x._2})
   
   //8
   def convert1Dto2D(column: Int, array: Array[Int]) = {
