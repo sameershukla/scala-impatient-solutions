@@ -25,7 +25,7 @@ object Problems extends App {
 
   //3 
   def removeZero(list: List[Int]) = {
-    println(list.map(_.toString.split("0")(0)).toList)
+    println(list.map(_.toString.split("0")).flatten)
   }
 
   removeZero(List(2, 3, 10, 40, 5, 60))
